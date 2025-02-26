@@ -1,0 +1,26 @@
+.header__menu-item a {
+    color: var(--title-light-text-color);
+}
+.header__menu-item.visible a {
+    color: var(--dark-main-text-color);
+}
+
+.header .header__menu-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.header .header__menu-item.visible {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer .header__menu-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
