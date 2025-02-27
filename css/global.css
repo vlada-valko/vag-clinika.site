@@ -22,7 +22,7 @@
     --button-color:rgb(233, 4, 42);
     --button-dark-hover-color:rgb(22, 22, 22);
     --button-light-hover-color:rgb(255, 255, 255);
-    --dark-background: url("../img/dark-background.jpg") 0 0 / 15% repeat;
+    --dark-background: url("../img/dark-background.jpg") 0 0 / 14% repeat;
     --light-background: url("../img/light-background.png") 0 0 / cover repeat;
   }
   * {
