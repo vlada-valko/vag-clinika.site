@@ -1,7 +1,7 @@
 const btnBurger = document.querySelector(".header__menu-burger");
 const burgerLine = document.querySelector(".menu-burger-lines");
 const navBlock = document.querySelector(".header__menu-and-social-media");
-let navLinks = Array.from(document.querySelectorAll(".header__menu-item-li")); // Виправлений селектор
+let navLinks = Array.from(document.querySelectorAll(".header__menu-item-li"));
 let socialMediaLinks = Array.from(document.querySelectorAll(".social-media__item"));
 
 let isAnimating = false;
@@ -10,13 +10,15 @@ let isAnimating = false;
 window.addEventListener("load", () => {
     resetMenuState();
     initializeMenuAnimation();
+    addLinkClickHandlers(); // Додаємо обробники подій до посилань
 });
 
 // Слухаємо подію після завантаження контенту через HTMX
 document.body.addEventListener("htmx:afterSwap", () => {
     resetMenuState();
-    updateSelectors(); // Оновлюємо вибрані елементи
+    updateSelectors();
     initializeMenuAnimation();
+    addLinkClickHandlers(); // Додаємо обробники подій до посилань
 });
 
 // Ініціалізація анімації меню
@@ -109,4 +111,16 @@ function resetMenuState() {
 
     navLinks.forEach((link) => link.classList.remove("nav-visible"));
     socialMediaLinks.forEach((link) => link.classList.remove("nav-visible"));
+}
+
+// Додаємо обробники подій до посилань
+function addLinkClickHandlers() {
+    const menuLinks = document.querySelectorAll(".header__menu-item li a");
+    if (menuLinks) {
+        menuLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+                closeMenu();
+            });
+        });
+    }
 }
