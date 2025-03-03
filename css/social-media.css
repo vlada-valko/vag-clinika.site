@@ -1,0 +1,26 @@
+.social-media {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.social-media__item{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: var(--social-media-circle-color);
+    transition: all ease-in-out 0.2s;
+    border-radius: 50%;
+}
+.social-media__item:hover{
+    background: var(--social-media-circle-hover-color);
+    transition: all ease-in-out 0.2s;
+}
+.social-media__item img {
+    width: 18px;
+    height: 18px;
+}

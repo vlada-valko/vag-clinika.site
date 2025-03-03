@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+/* * {
+  border: 1px solid red;
+} */
+
+
 .overflow-hidden {
     overflow: hidden;
   }
@@ -17,12 +23,12 @@
     --dark-main-text-color: rgb(74, 74, 74);
     --light-main-text-color: rgb(255, 255, 255);
     --line-decor-color:rgb(233, 4, 42);
-    --cotial-media-circle-color:rgb(233, 4, 42);
-    --cotial-media-circle-hover-color:rgb(251, 37, 72);
+    --social-media-circle-color:rgb(233, 4, 42);
+    --social-media-circle-hover-color:rgb(251, 37, 72);
     --button-color:rgb(233, 4, 42);
     --button-dark-hover-color:rgb(22, 22, 22);
     --button-light-hover-color:rgb(255, 255, 255);
-    --dark-background: url("../img/dark-background.jpg") 0 0 / 14% repeat;
+    --dark-background: url("../img/dark-background.jpg") 0 0 / 15% ;
     --light-background: url("../img/light-background.png") 0 0 / cover repeat;
   }
   * {

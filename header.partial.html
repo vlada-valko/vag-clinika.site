@@ -1,16 +1,26 @@
 <header class="header">
-    <div class="wrapper">
+  <div class="wrapper">
     <nav class="header__nav">
-    <a href="#" class="header__menu-burger">
-            <span class="menu-burger-lines"></span>
-    </a>
-    <div class="header__nav-logo">
+      <a href="#" class="header__menu-burger">
+        <span class="menu-burger-lines"></span>
+      </a>
+      <div class="header__nav-logo">
         <a href="index.html">
-            <p>VAG-clinika</p>
+          <p>VAG-clinika</p>
         </a>
-    </div>
-    <div data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="menu-list.partial.html"></div>
-    <div data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="sotial-media.partial.html"></div>
-</nav>
-    </div>
+      </div>
+      <div class="header__menu-and-social-media">
+        <div
+          data-hx-trigger="load"
+          data-hx-swap="outerHTML"
+          data-hx-get="menu-list.partial.html"
+        ></div>
+        <div
+          data-hx-trigger="load"
+          data-hx-swap="outerHTML"
+          data-hx-get="social-media.partial.html"
+        ></div>
+      </div>
+    </nav>
+  </div>
 </header>
