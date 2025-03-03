@@ -1,0 +1,16 @@
+.hero {
+    background: var(--dark-background);
+    width: 100vw;
+    height: 400px; /* Змінено на 100vh */
+    position: relative; /* Додано позиціонування */
+}
+
+.hero__auto-img {
+    background: url(../img/hero/banner.png) 100% 100% / cover no-repeat;
+    width: 350px;
+    height: 250px; /* Змінено на 100vh */
+    position: absolute; /* Додано позиціонування */
+    top: 0px;
+    right: 0;
+    z-index: 2; /* Додано z-index */
+}
