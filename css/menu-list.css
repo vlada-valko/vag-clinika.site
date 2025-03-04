@@ -50,6 +50,7 @@
 .header__menu-item-li.nav-visible, .social-media__item.nav-visible {
     transform: translateX(0);
     opacity: 1;
+    z-index: 1000;
 }
 @media (min-width: 1000px) {
     .header__menu-item-li, .social-media__item {
