@@ -1,0 +1,124 @@
+.about-us {
+    background: var(--light-line-background);
+    width: 100%;
+    height: auto;
+}
+
+.about-us .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    height: 100%;
+    padding: 50px 0px;
+}
+
+.about-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 40%;
+
+}
+
+.about-section img {
+    display: none;
+}
+
+@media(min-width:1000px) {
+    .about-section img {
+        display: block;
+        width: 48%;
+        object-fit: cover;
+        height: 250px;
+    }
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+    height: 100%;
+}
+
+@media(min-width:1000px) {
+    .about-text {
+        width: 48%;
+    }
+}
+
+.about-text .title {
+    font-size: 30px;
+    line-height: 40.8px;
+}
+
+@media(min-width:1000px) {
+    .about-text .title {
+        font-size: 34px;
+    }
+}
+
+.advantages-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    height: 55%;
+}
+
+@media (min-width:650px) {
+    .advantages-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+@media (min-width:1000px) {
+    .advantages-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+}
+
+.advantage-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--cards-background);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 30px 15px;
+    gap: 20px;
+    position: relative;
+}
+
+.advantage-card img {
+    width: calc(100%);
+    margin-top: -20px;
+    transform: scale(-1, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.advantage-title {
+    font-size: 24px;
+    line-height: 31.2px;
+    margin-top: 50px;
+}
+
+.advantage-card .decor {
+    display: block;
+    width: 20%;
+    height: 2px;
+    background: var(--line-decor-color);
+}
+
+.about-us .separator {
+    
+}

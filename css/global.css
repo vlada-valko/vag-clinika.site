@@ -8,7 +8,6 @@
 .overflow-hidden {
   overflow: hidden;
 }
-
 body {
   max-width: 100%;
   height: 1vh;
@@ -16,6 +15,45 @@ body {
   font-family: "Noto Sans", serif;
   font-weight: 400;
   font-size: 17px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+img {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: var(--dark-main-text-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+.wrapper {
+  width: 70%;
+  margin: auto;
+}
+h2 {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--h2-text-color);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  line-height: 24px;
+}
+.title {
+  font-family: "Ubuntu", serif;
+  font-weight: 700;
+}
+.main-text {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 25.5px;
+  color: var(--dark-main-text-color);
 }
 
 :root {
@@ -40,35 +78,13 @@ body {
 
   /* BACKGROUND */
   --dark-background: rgb(22, 22, 22);
+  --light-background: rgb(255, 255, 255);
   --dark-line-background: url("../img/dark-background.jpg") 0 0 / 15%;
-  --light-background: url("../img/light-background.png") 0 0 / cover repeat;
+  --light-line-background: url("../img/light-background.png") 0 0 / cover repeat;
+  --cards-background: rgb(237, 237, 237);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-ul {
-  list-style: none;
-}
-
-img {
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  color: var(--dark-main-text-color);
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.wrapper {
-  width: 80%;
-  margin: auto;
-}
 
 /* BUTTONS */
 
@@ -116,6 +132,7 @@ a {
 }
 
 
+/* SHOW/HIDDEN */
 
 .for-modile {
   display: flex;
