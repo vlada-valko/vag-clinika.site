@@ -79,9 +79,10 @@ h2 {
   /* BACKGROUND */
   --dark-background: rgb(22, 22, 22);
   --light-background: rgb(255, 255, 255);
-  --dark-line-background: url("../img/dark-background.jpg") 0 0 / 15%;
   --light-line-background: url("../img/light-background.png") 0 0 / cover repeat;
   --cards-background: rgb(237, 237, 237);
+  --dark-line-background: url("../img/dark-background.jpg") 0 0 / 70% ;
+
 }
 
 
