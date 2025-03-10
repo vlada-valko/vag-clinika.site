@@ -114,12 +114,7 @@
     margin-top: 50px;
 }
 
-.advantage-card .decor {
-    display: block;
-    width: 20%;
-    height: 2px;
-    background: var(--line-decor-color);
-}
+
 
 .about-us .separator {
     position: absolute;

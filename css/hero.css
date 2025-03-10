@@ -40,7 +40,7 @@
     padding-top: 50px;
 }
 
-.hero__decor {
+.hero .decor {
     display: block;
     width: 240px;
     height: 2px;
@@ -86,8 +86,9 @@
 .transparent-btn img {
     transition: filter ease-in-out 0.2s;
     width: 15px;
-    height: 10px;
+    height: 15px;
     margin-left: 5px;
+    margin-bottom: -2px;
     padding: 0;
 }
 

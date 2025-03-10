@@ -122,12 +122,6 @@
     }
 }
 
-.services__card__text .decor {
-    display: block;
-    width: 20%;
-    height: 2px;
-    background: var(--line-decor-color);
-}
 .services__card__text .red-btn:hover {
     background: var(--button-dark-hover-color);
     color: var(--light-main-text-color);

@@ -55,6 +55,12 @@ h2 {
   line-height: 25.5px;
   color: var(--dark-main-text-color);
 }
+.decor {
+  display: block;
+  width: 20%;
+  height: 2px;
+  background: var(--line-decor-color);
+}
 
 :root {
 /* TITLES */

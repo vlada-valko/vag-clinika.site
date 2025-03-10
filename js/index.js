@@ -1,5 +1,8 @@
 function init() {
     import("./menu.js");    
+    import("./outer-slider .js");  
+    import("./slick.min.js");
+    import("./photo-carousel.js")
   }
 
   
