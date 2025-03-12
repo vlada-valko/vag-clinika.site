@@ -1,6 +1,33 @@
-/* Additional styles for Slick slider */
+.projects {
+  background: var(--light-line-background);
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.projects .wrapper {
+  height: 100%;
+  padding: 50px 0px;
+}
+
+.projects h2,
+.projects .title {
+  width: fit-content;
+  margin: 25px auto;
+}
+
+.projects .title {
+  font-size: 46px;
+  line-height: 55.2px;
+}
+
+/* OUTER SLIDER */
 .slick-slider {
   min-width: 0;
+  border: 1px solid red;
+  width: 100%;
+  margin: auto;
 }
 
 .slick-list {
@@ -12,28 +39,6 @@
   align-items: center;
   padding-top: 50px;
 }
-
-.slick-slide {}
-
-.slick-slide.slick-active {}
-
-.slick-slide.slick-current {}
-
-.slick-slide.slick-center {}
-
-.slick-arrow {}
-
-.slick-arrow.slick-prev {}
-
-.slick-arrow.slick-next {}
-
-.slick-arrow.slick-disabled {}
-
-.slick-dots {}
-
-.slick-dots li {}
-
-.slick-dots button {}
 
 .slider {
   position: relative;
@@ -59,7 +64,7 @@
 .slider .slick-arrow.slick-prev {
   left: 0;
   background: url('../img/arrow.png') 0 0 / 100% no-repeat;
-  transform: rotate(180deg) translateY(50%);
+  transform: rotate(180deg) translateY(50%) translateX(50px);
   filter: invert(1) grayscale(1);
   border: none;
 
@@ -69,6 +74,7 @@
   right: 0;
   background: url('../img/arrow.png') 0 0 / 100% no-repeat;
   filter: invert(1) grayscale(1);
+  transform: translateX(50px);
   border: none;
 }
 
@@ -76,63 +82,122 @@
   opacity: 0.2;
 }
 
-.slider .slick-dots {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.slider .slick-dots li {
-  list-style: none;
-  margin: 0px 10px;
-}
-
-.slider .slick-dots button {
-  font-size: 0;
-  width: 10px;
-  height: 10px;
-  background-color: #fff;
-  border-radius: 50%;
-}
-
-.slider .slick-dots li.slick-active button {
-  background-color: var(--submenu-background-color);
-  border: 1px solid ;
-}
 
 .slider__item {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   padding: 0px 15px;
   margin-right: 10px;
-  background: var(--submenu-background-color);
-  height: var(--max-slider-height);
- height: 300px;
-  
+  background: var(--light-background);
+  height: 450px;
+  border: 1px solid gray;
+
+
+}
+
+.slider__item .title {
+  font-size: 34px;
+  margin: 0 auto;
+}
+
+.work-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  height: fit-content;
+}
+
+.checkmark-container {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: var(--social-media-circle-color);
+  transition: all ease-in-out 0.2s;
+  border-radius: 50%;
+}
+
+.checkmark-container img {
+  width: 17px;
+  height: 17px;
 }
 
 .slider__item img {
   max-width: 100%;
 }
 
-.slider__item.slick-center {}
 
 
+/*INNER SLIDER*/
 
-/*INNER*/
-slider img {
-  display: none;
-}
-
-slider .visible {
-  display: unset;
-}
-
-slider {
+.inner-slider {
+  position: relative;
+  margin: 50px auto 0;
   user-select: none;
-  font-size: 0;
+  touch-action: pan-y;
 }
 
-slider::after {
-   margin-left: -300px;
-   content:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='white' stroke-width='5' width='300' height='150'><path d='m 30 55 l -20 20 l 20 20' /><path d='m 270 55 l 20 20 l -20 20' /></svg>");
+.inner-slider img {
+  poiner-events: none;
+}
+
+.slider-list {
+  width: 90%;
+  height: 250px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.slider-list.grab {
+  cursor: grab;
+}
+
+.slider-list.grabbing {
+  cursor: grabbing;
+}
+
+.slider-track {
+  display: flex;
+}
+
+.slide {
+  width: 90%;
+  height: 250px;
+  flex-shrink: 0;
+  margin: auto;
+  border: 1px solid #000;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.slider-arrows {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.next,
+.prev {
+  background: none;
+  border: none;
+  margin: 0 10px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.next.disabled,
+.prev.disabled {
+  opacity: .25;
+  pointer-events: none;
 }

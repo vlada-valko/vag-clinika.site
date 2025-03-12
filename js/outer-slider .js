@@ -10,7 +10,7 @@ function initSlick() {
       arrows: true,
       dots: false,
       slidesToShow: slidesToShow,
-      autoplay: true,
+      autoplay: false,
       speed: 1000,
       autoplaySpeed: 33000,
       responsive: [

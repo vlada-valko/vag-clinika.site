@@ -5,7 +5,6 @@
     overflow: hidden;
     position: relative;
 }
-
 .about-us .wrapper {
     display: flex;
     flex-direction: column;
