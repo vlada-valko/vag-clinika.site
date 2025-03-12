@@ -1,7 +1,7 @@
 document.querySelectorAll('.inner-slider').forEach(slider => {
     let sliderList = slider.querySelector('.slider-list'),
         sliderTrack = slider.querySelector('.slider-track'),
-        slides = Array.from(slider.querySelectorAll('.slide')),
+        slides = Array.from(slider.querySelectorAll('.slide ')),
         arrows = slider.querySelector('.slider-arrows'),
         prev = arrows.children[0],
         next = arrows.children[1],
@@ -81,3 +81,7 @@ document.querySelectorAll('.inner-slider').forEach(slider => {
         sliderTrack.style.transform = `translateX(-${(slideIndex * 100)}%)`;
     });
 });
+
+
+
+Fancybox.bind("[data-fancybox]", {});

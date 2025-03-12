@@ -1,3 +1,40 @@
 <footer class="footer">
+    <div class="wrapper">
+        <nav
+            data-hx-trigger="load"
+            data-hx-swap="outerHTML"
+            data-hx-get="menu-list.partial.html">
+        </nav>
 
+        <div class="footer__contacts">
+            <p class="title">Контакти</p>
+            <div class="footer__mobile-phone">
+                <a href="tel:+380509994015" title="Зателефонувати">0 (50) 999 40 15</a>
+                <span> - Анатолій</span>
+            </div>
+            <div
+                data-hx-trigger="load"
+                data-hx-swap="outerHTML"
+                data-hx-get="social-media.partial.html">
+            </div>
+        </div>
+
+        <div class="footer__location">
+            <p class="title">Розміщення</p>
+            <a href="https://maps.app.goo.gl/29GbL7s9GPoCcV6JA" title="Переглянути на карті">
+                VAG_clinika <br>
+                вулиця Родини Бунґе, 6, Київ, 03134
+            </a>
+        </div>
+
+        <div class="footer__map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2542.1906628952393!2d30.4059001!3d50.4189192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cb1e0ad02f39%3A0x65db8dda1de94f1e!2sVAG_clinika!5e0!3m2!1suk!2sua!4v1741790593679!5m2!1suk!2sua" 
+                
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div> 
 </footer>

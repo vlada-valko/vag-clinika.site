@@ -71,6 +71,7 @@ h2 {
   /* MAIN TEXT */
   --dark-main-text-color: rgb(74, 74, 74);
   --light-main-text-color: rgb(255, 255, 255);
+  --footer-text-color: rgb(189, 189, 189);
 
   /* DECORATIONS */
   --line-decor-color: rgb(233, 4, 42);

@@ -6,9 +6,30 @@
   position: relative;
 }
 
+.projects .separator {
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  background: transparent;
+  top: -40px;
+}
+
+.projects .separator::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: white;
+  opacity: 1;
+  transform: skewY(-181.7deg);
+  height: 45px;
+}
+
+
 .projects .wrapper {
   height: 100%;
-  padding: 50px 0px;
+  padding: 0px;
 }
 
 .projects h2,
@@ -25,8 +46,7 @@
 /* OUTER SLIDER */
 .slick-slider {
   min-width: 0;
-  border: 1px solid red;
-  width: 100%;
+  width: 90%;
   margin: auto;
 }
 
@@ -37,12 +57,12 @@
 .slick-track {
   display: flex;
   align-items: center;
-  padding-top: 50px;
 }
 
 .slider {
   position: relative;
   padding: 0px 60px;
+  margin-bottom: 50px;
 }
 
 @media (max-width:767px) {
@@ -87,22 +107,28 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-around;
   padding: 0px 15px;
   margin-right: 10px;
   background: var(--light-background);
+  border-radius: 15px;
   height: 450px;
-  border: 1px solid gray;
-
-
+}
+@media(min-width:500px){
+  .slider__item{
+    justify-content: space-between;
+  }
 }
 
 .slider__item .title {
-  font-size: 34px;
+  font-size: 24px;
+  line-height: normal;
   margin: 0 auto;
+  text-align: center;
 }
-
+.slider__item__text {
+  margin-top: 20px;
+}
 .work-details {
   display: flex;
   flex-direction: row;
@@ -110,11 +136,20 @@
   align-items: center;
   gap: 10px;
   height: fit-content;
+  width: 90%;
+  margin: 0 auto -10px;
+}
+
+.work-details .main-text {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: normal;
+  padding: 10px 0;
 }
 
 .checkmark-container {
-  width: 20px;
-  height: 20px;
+  min-width: 20px;
+  min-height: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -139,7 +174,7 @@
 
 .inner-slider {
   position: relative;
-  margin: 50px auto 0;
+  margin: 30px auto 0;
   user-select: none;
   touch-action: pan-y;
 }
@@ -149,10 +184,17 @@
 }
 
 .slider-list {
-  width: 90%;
-  height: 250px;
+  width: 100%;
+  height: 200px;
   overflow: hidden;
   margin: auto;
+}
+
+@media(min-width:500px) {
+  .slider-list {
+    width: 90%;
+    height: 250px;
+  }
 }
 
 .slider-list.grab {
@@ -169,10 +211,9 @@
 
 .slide {
   width: 90%;
-  height: 250px;
+  height: 180px;
   flex-shrink: 0;
   margin: auto;
-  border: 1px solid #000;
 }
 
 .slide img {
@@ -181,7 +222,18 @@
   object-fit: cover;
   border-radius: 15px;
 }
-
+@media (min-width:500px) {
+  .slide {
+    width: 90%;
+    height: 250px;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
 .slider-arrows {
   margin-top: 15px;
   text-align: center;
@@ -200,4 +252,24 @@
 .prev.disabled {
   opacity: .25;
   pointer-events: none;
+}
+
+
+.projects .separator-down {
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  bottom: -33px;
+}
+.projects .separator-down::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 100%;
+  height: 80px;
+    background: linear-gradient(to right, transparent 0%, rgb(213, 213, 213) 0%, transparent 100%);
+  opacity: 0.7;
+  transform: skewY(-176deg);
 }

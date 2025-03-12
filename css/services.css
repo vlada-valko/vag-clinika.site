@@ -8,9 +8,9 @@
 .services .separator {
     position: absolute;
     width: 100%;
-    height: 51px;
+    height: 70px;
     background: transparent;
-    top: -26px;
+    top: -40px;
 }
 
 .services .separator::before {
@@ -29,9 +29,9 @@
     content: "";
     position: absolute;
     left: 0;
-    top: 10px;
+    top: 0px;
     width: 100%;
-    height: 60px;
+    height: 70px;
     background: white;
     opacity: 0.7;
     transform: skewY(-184deg);
@@ -130,9 +130,9 @@
 .services .separator-down {
     position: absolute;
     width: 100%;
-    height: 51px;
+    height: 70px;
     background: transparent;
-    bottom: -40px;
+    bottom: -33px;
 }
 .services .separator-down::after {
     content: "";
@@ -140,7 +140,7 @@
     left: 0;
     top: 10px;
     width: 100%;
-    height: 60px;
+    height: 80px;
     background: white;
     opacity: 0.7;
     transform: skewY(-176deg);

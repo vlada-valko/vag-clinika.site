@@ -37,3 +37,5 @@ $(window).on('load resize', function() {
 $(document).ready(function() {
   initSlick();
 });
+
+
