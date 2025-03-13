@@ -1,17 +1,18 @@
 .footer {
     background: var(--dark-line-background);
     color: var(--footer-text-color);
-    height: 200px;
     display: flex;
     align-items: center;
     position: relative;
+    padding: 20px 0;
 }
 
 .footer .wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;  
+    align-items: center; 
+    gap: 20px; 
 }
 @media(min-width:1000px){
     .footer .wrapper{
@@ -27,6 +28,7 @@
 
 .footer .header__menu {
     flex: .5;
+    height: 150px;
 }
 .footer__contacts, .footer__location{
     height: 150px;
@@ -38,6 +40,13 @@
 }
 .footer .title {
     color: var(--title-light-text-color);
+}
+.footer .social-media__item {
+    transform: none;
+    opacity: 1;
+}
+.footer__location {
+text-align: center;
 }
 .footer iframe {
     border-radius: 15px;

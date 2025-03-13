@@ -69,21 +69,21 @@ function openMenu() {
             .slice()
             .reverse()
             .forEach((link, index) => {
-                setTimeout(() => link.classList.add("nav-visible"), index * 100);
+                setTimeout(() => link.classList.add("nav-visible"), index * 50);
             });
     }, navLinks.length * 100);
 
     // Затримка для завершення анімації
     setTimeout(() => {
         isAnimating = false;
-    }, (navLinks.length + socialMediaLinks.length) * 100);
+    }, (navLinks.length + socialMediaLinks.length) * 50);
 }
 
 // Функція для закриття меню
 function closeMenu() {
     // Пункти меню зникають по черзі
     navLinks.forEach((link, index) => {
-        setTimeout(() => link.classList.remove("nav-visible"), index * 100);
+        setTimeout(() => link.classList.remove("nav-visible"), index * 50);
     });
 
     // Соціальні мережі зникають після меню
@@ -92,15 +92,15 @@ function closeMenu() {
             .slice()
             .reverse()
             .forEach((link, index) => {
-                setTimeout(() => link.classList.remove("nav-visible"), index * 100);
+                setTimeout(() => link.classList.remove("nav-visible"), index * 50);
             });
-    }, navLinks.length * 100);
+    }, navLinks.length * 50);
 
     // Після завершення анімації скидаємо все
     setTimeout(() => {
         resetMenuState();
         isAnimating = false;
-    }, (navLinks.length + socialMediaLinks.length) * 100);
+    }, (navLinks.length + socialMediaLinks.length) * 50);
 }
 
 // Функція для скидання стану меню
