@@ -71,15 +71,15 @@
 
 .hero__buttons {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
     width: fit-content;
 }
-@media(max-width:550px) {
+@media(min-width:550px) {
     .hero__buttons {
-        flex-direction: column;
+        flex-direction: row;
     }
 }
 
