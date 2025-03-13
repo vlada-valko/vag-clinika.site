@@ -37,6 +37,10 @@
   width: fit-content;
   margin: 25px auto;
 }
+.projects .title {
+text-align: center;
+}
+
 
 .projects .title {
   font-size: 46px;

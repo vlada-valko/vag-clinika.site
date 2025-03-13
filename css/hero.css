@@ -67,8 +67,6 @@
     color: var(--light-main-text-color);
 
 }
-
-
 .hero__buttons {
     display: flex;
     flex-direction: column;
@@ -77,7 +75,7 @@
     gap: 10px;
     width: fit-content;
 }
-@media(min-width:550px) {
+@media(min-width:500px){
     .hero__buttons {
         flex-direction: row;
     }
