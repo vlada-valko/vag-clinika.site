@@ -10,6 +10,7 @@ async function init() {
         console.log("photo-carousel.js loaded");
         await import("./show-all-services.js");
         console.log("show-all-services.js loaded");
+        await import("./price-show.js");
     } catch (error) {
         console.error("Error loading scripts:", error);
     }
