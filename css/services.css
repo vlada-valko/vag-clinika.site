@@ -115,6 +115,7 @@
 @media (min-width:1000px) {
     .services__container {
         flex-direction: row;
+        flex-wrap: wrap;
     }
 }
 
@@ -123,6 +124,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    order: initial;
     width: 100%;
     background: var(--light-background);
     border-radius: 15px;
@@ -245,3 +247,4 @@
     opacity: 0.7;
     transform: skewY(-176deg);
 }
+
