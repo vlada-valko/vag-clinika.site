@@ -1,65 +1,100 @@
 const showAllServices = document.querySelector(".show-all-services");
 const servicesBlock = document.querySelector(".services");
-const btn = document.getElementById("show-price");
 
-// Функція для відкриття servicesBlock
+let initialHeight = servicesBlock ? servicesBlock.offsetHeight : 0;
+
 function toggleServicesBlock(isFullHeight = true) {
+    if (!servicesBlock) return;
+
     if (isFullHeight) {
-        // Розгортаємо на всю висоту
         const contentHeight = servicesBlock.scrollHeight;
         servicesBlock.style.height = contentHeight + "px";
-        servicesBlock.addEventListener("transitionend", function () {
+        servicesBlock.addEventListener("transitionend", function handler() {
             servicesBlock.classList.add("full-height");
-            servicesBlock.style.height = ''; // Скидаємо висоту після анімації
+            servicesBlock.style.height = "";
+            servicesBlock.removeEventListener("transitionend", handler);
         });
     } else {
-        // Перевіряємо ширину екрану перед тим, як встановлювати висоту 1400px
         if (window.innerWidth <= 1000) {
-            servicesBlock.style.height = "1400px";
+            servicesBlock.style.transition = "height 0.3s ease";
+            servicesBlock.style.height = servicesBlock.scrollHeight + "px";
+
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    servicesBlock.style.height = initialHeight + "px"; 
+                });
+            });
+
+            servicesBlock.addEventListener("transitionend", function handler() {
+                servicesBlock.style.transition = "";
+                servicesBlock.removeEventListener("transitionend", handler);
+            });
         } else {
-            servicesBlock.style.height = ""; // Не встановлюємо 1400px, залишаємо за замовчуванням
+            servicesBlock.style.height = "";
         }
     }
 }
 
 if (showAllServices && servicesBlock) {
-    // Розгортання/згортання по кліку на showAllServices
     showAllServices.addEventListener("click", () => {
-        // Якщо блок вже повністю відкритий, то будемо його закривати
         if (servicesBlock.classList.contains("full-height")) {
-            servicesBlock.style.height = servicesBlock.scrollHeight + "px"; 
+            servicesBlock.style.height = servicesBlock.scrollHeight + "px";
+
             setTimeout(() => {
-                servicesBlock.style.height = "0"; 
-            }, 20); 
+                servicesBlock.style.height = initialHeight + "px"; 
+            }, 20);
 
             servicesBlock.scrollIntoView({ behavior: "smooth" });
 
-            servicesBlock.addEventListener("transitionend", () => {
+            servicesBlock.addEventListener("transitionend", function handler() {
                 servicesBlock.classList.remove("full-height");
-                servicesBlock.style.height = ''; // Скидаємо висоту після анімації
+                servicesBlock.style.height = "";
+                servicesBlock.removeEventListener("transitionend", handler);
             });
         } else {
-            // Якщо блок ще не повністю відкритий, розгортаємо його повністю
-            toggleServicesBlock(true); // Викликаємо для повного розгортання
+            toggleServicesBlock(true);
         }
     });
 }
 
-if (btn) {
-    // Розгортання по кліку на btn на 400px або іншу висоту, якщо ширина екрану більше 1000px
-    btn.addEventListener("click", () => {
-        // Перевіряємо ширину екрану
-        if (window.innerWidth <= 1000) {
-            // Перевіряємо, чи блок не в стані full-height (не розгорнутий на всю висоту)
-            if (!servicesBlock.classList.contains("full-height")) {
-                // Перевіряємо, чи не розгорнутий блок більше на 400px
-                if (parseInt(servicesBlock.style.height) !== 1400) {
-                    toggleServicesBlock(false); // Розгортаємо лише на 400px
-                }
+function expandServicesForCard(card) {
+    if (window.innerWidth > 1000 || !servicesBlock) return;
+    if (servicesBlock.classList.contains("full-height")) return;
+
+    const cardBottom = card.offsetTop + card.offsetHeight;
+    const currentHeight = servicesBlock.offsetHeight;
+
+    if (cardBottom > currentHeight) {
+        servicesBlock.style.height = (cardBottom + 60) + "px";
+    }
+}
+
+function collapseServicesIfNoVisiblePrices() {
+    if (window.innerWidth > 1000 || !servicesBlock) return;
+
+    const anyOpen = document.querySelector(".services__card.price-visible");
+    if (!anyOpen && !servicesBlock.classList.contains("full-height")) {
+        toggleServicesBlock(false);
+    }
+}
+
+const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+        if (
+            mutation.type === "attributes" &&
+            mutation.attributeName === "class" &&
+            mutation.target.classList.contains("services__card")
+        ) {
+            const card = mutation.target;
+            if (card.classList.contains("price-visible")) {
+                expandServicesForCard(card);
+            } else {
+                collapseServicesIfNoVisiblePrices();
             }
-        } else {
-            // Якщо ширина екрану більша за 1000px, не даємо розгорнути більше, ніж потрібно
-            toggleServicesBlock(false); // Розгортаємо на іншу висоту або залишаємо стандартну
         }
     });
-}
+});
+
+document.querySelectorAll(".services__card").forEach((card) => {
+    observer.observe(card, { attributes: true });
+});

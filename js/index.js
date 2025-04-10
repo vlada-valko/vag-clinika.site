@@ -1,15 +1,10 @@
 async function init() {
     try {
         await import("./menu.js");
-        console.log("menu.js loaded");
         await import("./outer-slider.js");
-        console.log("outer-slider.js loaded");
         await import("./slick.min.js");
-        console.log("slick.min.js loaded");
         await import("./photo-carousel.js");
-        console.log("photo-carousel.js loaded");
         await import("./show-all-services.js");
-        console.log("show-all-services.js loaded");
         await import("./price-show.js");
     } catch (error) {
         console.error("Error loading scripts:", error);

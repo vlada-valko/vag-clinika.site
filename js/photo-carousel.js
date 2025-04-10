@@ -9,30 +9,24 @@ document.querySelectorAll('.inner-slider').forEach(slider => {
         allowSwipe = true,
         transition = true;
 
-    // 🔄 Клонування першого та останнього слайдів
     let firstClone = slides[0].cloneNode(true);
     let lastClone = slides[slides.length - 1].cloneNode(true);
 
     sliderTrack.appendChild(firstClone);
     sliderTrack.insertBefore(lastClone, slides[0]);
 
-    // 🔄 Оновлення змінної slides після клонування
     slides = Array.from(slider.querySelectorAll('.slide'));
     let totalSlides = slides.length;
 
-    // 📌 Встановлення однакової ширини для всіх слайдів
     slides.forEach(slide => {
-        slide.style.width = '100%'; // Займає всю доступну ширину
+        slide.style.width = '100%'; 
     });
 
-    // 📌 Функція для отримання поточної ширини контейнера
     let getSlideWidth = () => sliderList.clientWidth;
 
-    // 📌 Встановлення початкової позиції
     sliderTrack.style.transition = 'none';
     sliderTrack.style.transform = `translateX(-${(slideIndex * 100)}%)`;
 
-    // 📌 Функція для зміни слайдів
     let slide = function() {
         if (transition) {
             sliderTrack.style.transition = 'transform 0.5s ease-in-out';
@@ -40,7 +34,6 @@ document.querySelectorAll('.inner-slider').forEach(slider => {
         sliderTrack.style.transform = `translateX(-${(slideIndex * 100)}%)`;
     };
 
-    // 🎯 Подія завершення анімації (перемикає слайд без стрибка)
     sliderTrack.addEventListener('transitionend', () => {
         if (slideIndex === totalSlides - 1) {
             sliderTrack.style.transition = 'none';
@@ -56,7 +49,6 @@ document.querySelectorAll('.inner-slider').forEach(slider => {
         allowSwipe = true;
     });
 
-    // 🎯 Обробка натискання кнопок "вперед" і "назад"
     arrows.addEventListener('click', function(event) {
         event.stopPropagation();
         if (!allowSwipe) return;
@@ -75,7 +67,6 @@ document.querySelectorAll('.inner-slider').forEach(slider => {
         slide();
     });
 
-    // 📌 Оновлення ширини при зміні розміру вікна
     window.addEventListener('resize', () => {
         sliderTrack.style.transition = 'none';
         sliderTrack.style.transform = `translateX(-${(slideIndex * 100)}%)`;
