@@ -4,7 +4,7 @@ export const services = [
     /*НАЗВА ПОСЛУГИ*/
     title: "Діагностика та ремонт двигуна",
     /*КАРТИНКА*/
-    img: "/img/services/engine-diagnostics.jpg",
+    img: "../img/services/engine-diagnostics.jpg",
     /*ОПИС*/
     description:
       "Швидка та точна діагностика та ремонт двигуна для безперебійної роботи вашого авто.",
@@ -33,7 +33,7 @@ export const services = [
     /*НАЗВА ПОСЛУГИ*/
     title: "Ремонт ходової частини",
     /*КАРТИНКА*/
-    img: "/img/services/chassis.jpg",
+    img: "../img/services/chassis.jpg",
     /*ОПИС*/
     description:
       "Швидкий та якісний ремонт для забезпечення комфорту та безпеки.",
@@ -65,7 +65,7 @@ export const services = [
     /*НАЗВА ПОСЛУГИ*/
     title: "Ремонт TSI - TDI - TFSI",
     /*КАРТИНКА*/
-    img: "/img/services/TSI – TFSI.jpg",
+    img: "../img/services/TSI – TFSI.jpg",
     /*ОПИС*/
     description:
       "Професійний ремонт двигунів TSI, TDI та TFSI для відновлення їхньої ефективності та надійності.",
@@ -80,7 +80,7 @@ export const services = [
     /* НАЗВА ПОСЛУГИ */
     title: "Ремонт усіх видів підвісок",
     /* КАРТИНКА */
-    img: "/img/services/air-suspension.jpg",
+    img: "../img/services/air-suspension.jpg",
     /* ОПИС */
     description: "Експертний ремонт для забезпечення комфорту та стабільності.",
     /* ЦІНИ */
@@ -95,7 +95,7 @@ export const services = [
     /* НАЗВА ПОСЛУГИ */
     title: "Ремонт паливної системи",
     /* КАРТИНКА */
-    img: "/img/services/fuel-system.jpg",
+    img: "../img/services/fuel-system.jpg",
     /* ОПИС */
     description:
       "Професійний ремонт для забезпечення оптимальної роботи двигуна та економії пального.",
@@ -112,7 +112,7 @@ export const services = [
     /* НАЗВА ПОСЛУГИ */
     title: "Доукомплектування штатним обладнанням",
     /* КАРТИНКА */
-    img: "/img/services/headlight.jpg",
+    img: "../img/services/headlight.jpg",
     /* ОПИС */
     description:
       "Доукомплектування штатним обладнанням для зручності та комфорту.",
@@ -131,7 +131,7 @@ export const services = [
     /* НАЗВА ПОСЛУГИ */
     title: "Програмне керування блоків ECU",
     /* КАРТИНКА */
-    img: "/img/services/ECU.jpg",
+    img: "../img/services/ECU.jpg",
     /* ОПИС */
     description: "Chip tuning, видалення ad_blue, egr, pdf.",
     /* ЦІНИ */
@@ -150,7 +150,7 @@ export const services = [
     /* НАЗВА ПОСЛУГИ */
     title: "Ремонт та обслуговування МКПП, АКПП, DSG",
     /* КАРТИНКА */
-    img: "/img/services/МКПП.jpg",
+    img: "../img/services/МКПП.jpg",
     /* ОПИС */
     description:
       "Ремонт та обслуговування для безперебійної роботи трансмісії.",
@@ -169,7 +169,7 @@ export const services = [
     /* НАЗВА ПОСЛУГИ */
     title: "Ремонт турбін",
     /* КАРТИНКА */
-    img: "/img/services/turbine.jpg",
+    img: "../img/services/turbine.jpg",
     /* ОПИС */
     description:
       "Ремонт турбін для відновлення потужності та ефективності вашого двигуна.",
@@ -186,7 +186,7 @@ export const services = [
     /* НАЗВА ПОСЛУГИ */
     title: "Заправка кондиціонера",
     /* КАРТИНКА */
-    img: "/img/services/conditioner.jpg",
+    img: "../img/services/conditioner.jpg",
     /* ОПИС */
     description:
       "Професійна заправка кондиціонера для оптимальної роботи системи охолодження.",
