@@ -1,7 +1,7 @@
  #  :red_car: vag-klinika.site - Responsive Auto Service Website
 A responsive one-page website for an auto service center. Features a list of services,  pricing, and contact details. 
  
- ## :large_red_diamond: Demo
+ ## :diamonds: Demo
 :link:  [Live Website](https://vlada-valko.github.io/vag-clinika.site/) - https://vlada-valko.github.io/vag-clinika.site/
 ### Demo GIFs
 **Desktop view:**  
