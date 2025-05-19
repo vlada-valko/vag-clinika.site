@@ -13,7 +13,7 @@ services.forEach((service) => {
   const img = document.createElement("img");
   img.src = service.img;
   const fileName = service.img.split('/').pop().split('.')[0];
-  img.alt = `${fileName}`;  // Ось тут правильне присвоєння alt
+  img.alt = `${fileName}`; 
   
 
   const cardText = document.createElement("div");
