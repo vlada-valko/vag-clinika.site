@@ -3,6 +3,7 @@ async function init() {
         await import("./menu.js");
         await import("./outer-slider.js");
         await import("./slick.min.js");
+        await import("./prices.js");
         await import("./photo-carousel.js");
         await import("./show-all-services.js");
         await import("./price-show.js");
